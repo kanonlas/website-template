@@ -6,53 +6,86 @@
 
     <title>My Portfolio</title>
 
-    <!-- CSS -->
+    <!-- Tailwind CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body class="bg-gray-50 text-gray-900">
     <!-- ==================== NAVBAR ==================== -->
-    <nav class="navbar">
-      <div class="container">
-        <a href="#home" class="logo">My Portfolio</a>
+    <nav class="sticky top-0 z-50 bg-gray-900 text-white shadow-md">
+      <div
+        class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+      >
+        <a href="#home" class="text-2xl font-bold hover:text-cyan-400">
+          My Portfolio
+        </a>
 
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="flex gap-6">
+          <li>
+            <a href="#home" class="hover:text-cyan-400"> Home </a>
+          </li>
+
+          <li>
+            <a href="#about" class="hover:text-cyan-400"> About </a>
+          </li>
+
+          <li>
+            <a href="#skills" class="hover:text-cyan-400"> Skills </a>
+          </li>
+
+          <li>
+            <a href="#projects" class="hover:text-cyan-400"> Projects </a>
+          </li>
+
+          <li>
+            <a href="experiences.html" class="hover:text-cyan-400">
+              experiences
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact" class="hover:text-cyan-400"> Contact </a>
+          </li>
         </ul>
       </div>
     </nav>
 
     <!-- ==================== HOME ==================== -->
-    <section id="home" class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <p class="greeting">Hello, I'm</p>
+    <section id="home" class="flex min-h-screen items-center bg-white">
+      <div class="mx-auto w-full max-w-6xl px-6">
+        <div class="text-center">
+          <p class="text-xl text-gray-500">Hello, I'm</p>
 
-          <h1>Your Name</h1>
+          <h1 class="mt-2 text-6xl font-bold text-gray-900">
+            Kanolas Rattanapak
+          </h1>
 
-          <h2>Computer Engineering Student</h2>
+          <h2 class="mt-4 text-2xl font-semibold text-cyan-600">
+            Master degree in Computer science right now
+          </h2>
 
-          <p>
+          <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
             Welcome to my portfolio website. I'm interested in cybersecurity,
             software development, and technology.
           </p>
 
-          <a href="#projects" class="btn">View My Projects</a>
+          <a
+            href="#projects"
+            class="mt-8 inline-block rounded-lg bg-gray-900 px-6 py-3 font-semibold text-white transition hover:bg-cyan-600"
+          >
+            View My Projects
+          </a>
         </div>
       </div>
     </section>
 
     <!-- ==================== ABOUT ==================== -->
-    <section id="about" class="about">
-      <div class="container">
-        <h2>About Me</h2>
+    <section id="about" class="bg-gray-100 px-6 py-20">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="text-4xl font-bold">About Me</h2>
 
-        <p>
-          I am a Computer Engineering student with an interest in cybersecurity,
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          I am a Computer Science student with an interest in cybersecurity,
           programming, and emerging technologies. This website showcases my
           projects, skills, and experience.
         </p>
@@ -60,74 +93,170 @@
     </section>
 
     <!-- ==================== SKILLS ==================== -->
-    <section id="skills" class="skills">
-      <div class="container">
-        <h2>My Skills</h2>
+    <section id="skills" class="bg-white px-6 py-20">
+      <div class="mx-auto max-w-5xl">
+        <h2 class="text-center text-4xl font-bold">My Skills</h2>
 
-        <div class="skills-list">
-          <div class="skill">Python</div>
-          <div class="skill">HTML</div>
-          <div class="skill">CSS</div>
-          <div class="skill">JavaScript</div>
-          <div class="skill">Git & GitHub</div>
-          <div class="skill">Cybersecurity</div>
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+          <div class="rounded-full bg-gray-900 px-5 py-2 text-white">
+            Python
+          </div>
+
+          <div class="rounded-full bg-gray-900 px-5 py-2 text-white">HTML</div>
+
+          <div class="rounded-full bg-gray-900 px-5 py-2 text-white">CSS</div>
+
+          <div class="rounded-full bg-gray-900 px-5 py-2 text-white">
+            JavaScript
+          </div>
+
+          <div class="rounded-full bg-gray-900 px-5 py-2 text-white">
+            Git & GitHub
+          </div>
+
+          <div class="rounded-full bg-gray-900 px-5 py-2 text-white">
+            Cybersecurity
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ==================== PROJECTS ==================== -->
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2>My Projects</h2>
+    <section id="projects" class="bg-gray-100 px-6 py-20">
+      <div class="mx-auto max-w-6xl">
+        <h2 class="text-center text-4xl font-bold">My Projects</h2>
 
-        <div class="project-list">
-          <div class="project-card">
-            <h3>Project 1</h3>
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <!-- Project 1 -->
+          <div
+            class="rounded-xl bg-white p-6 shadow-md transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <h3 class="text-2xl font-bold">Checkchue</h3>
 
-            <p>A short description of your project goes here.</p>
+            <p class="mt-3 text-gray-600">
+              A web-based QR code attendance system that helps instructors and
+              students manage class attendance securely and efficiently, with
+              Excel import/export and Scrum-based development.
+            </p>
 
-            <a href="#" class="project-link">View Project</a>
+            <a
+              href="https://veiled-flier-88f.notion.site/Check_Chue-13c33cc719fa801fa38edc88826a1774"
+              class="mt-5 inline-block font-semibold text-cyan-600 hover:text-cyan-800"
+            >
+              View Project →
+            </a>
           </div>
 
-          <div class="project-card">
-            <h3>Project 2</h3>
+          <!-- Project 2 -->
+          <div
+            class="rounded-xl bg-white p-6 shadow-md transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <h3 class="text-2xl font-bold">Thunnae express</h3>
 
-            <p>A short description of your project goes here.</p>
+            <p class="mt-3 text-gray-600">
+              A smart transportation concept combining a mobile booking
+              application, route tracking, smart seating, and child facial
+              recognition to improve safety, convenience, and travel management
+              for passengers.
+            </p>
 
-            <a href="#" class="project-link">View Project</a>
+            <a
+              href="https://future-beast-5a0.notion.site/Project-Management-Thunnae-21f02ae5451480a09446dff7d0780725"
+              class="mt-5 inline-block font-semibold text-cyan-600 hover:text-cyan-800"
+            >
+              View Project →
+            </a>
           </div>
 
-          <div class="project-card">
-            <h3>Project 3</h3>
+          <!-- Project 3 -->
+          <div
+            class="rounded-xl bg-white p-6 shadow-md transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <h3 class="text-2xl font-bold">
+              Nash Equilibrium on hybrid system
+            </h3>
 
-            <p>A short description of your project goes here.</p>
+            <p class="mt-3 text-gray-600">
+              A research project applying Game Theory and Quantum Computing to
+              model cybersecurity interactions between attackers and defenders.
+              The project uses Graph Theory, Nash Equilibrium, and Quantum
+              Annealing to analyze and optimize network security strategies.
+            </p>
 
-            <a href="#" class="project-link">View Project</a>
+            <a
+              href="https://colab.research.google.com/drive/1R46N6erYV9xoSJO42idKq5l3PPA3eJLO?usp=sharing"
+              class="mt-5 inline-block font-semibold text-cyan-600 hover:text-cyan-800"
+            >
+              View Project →
+            </a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== experiences ==================== -->
+    <section id="experiences" class="flex min-h-screen items-center bg-white">
+      <div class="mx-auto w-full max-w-6xl px-6">
+        <div class="text-center">
+          <h2 class="text-center text-4xl font-bold">My Experience</h2>
+
+          <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
+            click this button below to see my experience.
+          </p>
+
+          <a
+            href="experiences.html"
+            class="mt-8 inline-block rounded-lg bg-gray-900 px-6 py-3 font-semibold text-white transition hover:bg-cyan-600"
+          >
+            View My journey
+          </a>
         </div>
       </div>
     </section>
 
     <!-- ==================== CONTACT ==================== -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>Contact Me</h2>
+    <section id="contact" class="bg-white px-6 py-20 text-center">
+      <div class="mx-auto max-w-4xl">
+        <h2 class="text-4xl font-bold">Contact Me</h2>
 
-        <p>
+        <p class="mt-6 text-lg text-gray-600">
           Feel free to contact me if you would like to connect or collaborate.
         </p>
 
-        <div class="contact-links">
-          <a href="mailto:your@email.com">Email</a>
-          <a href="#" target="_blank">GitHub</a>
-          <a href="#" target="_blank">LinkedIn</a>
+        <div class="mt-8 flex justify-center gap-6">
+          <a
+            href="mailto:your@email.com"
+            class="font-semibold text-cyan-600 hover:text-cyan-800"
+          >
+            Email
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            class="font-semibold text-cyan-600 hover:text-cyan-800"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            class="font-semibold text-cyan-600 hover:text-cyan-800"
+          >
+            LinkedIn
+          </a>
         </div>
       </div>
     </section>
 
     <!-- ==================== FOOTER ==================== -->
-    <footer>
-      <p>&copy; <span id="year"></span> My Portfolio. All rights reserved.</p>
+    <footer class="bg-gray-900 px-6 py-6 text-center text-white">
+      <p>
+        &copy;
+        <span id="year"></span>
+        My Portfolio. All rights reserved.
+      </p>
     </footer>
 
     <!-- JavaScript -->
